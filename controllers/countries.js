@@ -56,4 +56,17 @@ router.delete("/:countryId", async (req, res) => {
   }
 });
 
+router.get("/:countryId/edit", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const country = currentUser.countries.id(req.params.countryId);
+    res.render("countries/edit.ejs", {
+      country: country,
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
 module.exports = router;

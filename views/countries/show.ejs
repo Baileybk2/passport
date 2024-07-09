@@ -17,6 +17,11 @@
     <% } %> <% if (country.locationOfStay) { %>
     <p>Location of Stay: <%= country.locationOfStay %></p>
     <% } %>
+
+    <a href="/users/<%= user._id %>/countries/<%= country._id %>/edit">
+      Edit this Country
+    </a>
+
     <form
       action="/users/<%= user._id %>/countries/<%= country._id %>?_method=DELETE"
       method="POST"

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit <%= country.country %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Edit <%= country.country %></h1>
+    <form action="/users/<%= user._id %>/countries" method="PUT" method="POST">
+      <label for="country">Country:</label>
+      <input
+        type="text"
+        name="country"
+        id="country"
+        value="<%= country.country %>"
+      />
+
+      <label for="date">Date:</label>
+      <input type="text" name="date" id="date" value="<%= country.date %>" />
+
+      <label for="pointOfEntry">Point of Entry (city):</label>
+      <input
+        type="text"
+        name="pointOfEntry"
+        id="pointOfEntry"
+        value="<%= country.pointOfEntry %>"
+      />
+
+      <label for="purpose">Purpose:</label>
+      <select id="purpose" name="purpose">
+        <option value="Leisure" <%= country.purpose === "Leisure" ? "selected" : "" %> >Leisure
+        </option>
+
+        <option value="Business" <%= country.purpose === "Business" ? "selected" : "" %> >Business</option>
+
+        <option value="Education" <%= country.purpose === "Education" ? "selected" : "" %> >Education</option>
+
+        <option value="Other" <%= country.purpose === "Other" ? "selected" : "" %> >Other
+        </option>
+      </select>
+
+      <label for="notes">Notes:</label>
+      <textarea name="notes" id="notes"><%= country.notes %></textarea>
+
+      <label for="locationOfStay">Location of Stay (city):</label>
+      <input
+        type="text"
+        name="locationOfStay"
+        id="locationOfStay"
+        value="<%= country.locationOfStay %>"
+      />
+
+      <button type="submit">Update Country</button>
+    </form>
+  </body>
+</html>
