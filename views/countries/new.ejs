@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Country</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Add a Country</h1>
+    <form action="" method="">
+      <label for="country">Country:</label>
+      <input type="text" name="country" id="country" />
+
+      <label for="date">Date (mm/dd/yyyy):</label>
+      <input type="text" name="date" id="date" />
+
+      <label for="pointOfEntry">Point of Entry (city):</label>
+      <input type="text" name="pointOfEntry" id="pointOfEntry" />
+
+      <label for="purpose">Purpose:</label>
+      <select id="purpose" name="purpose">
+        <option value="leisure">Leisure</option>
+        <option value="business">Business</option>
+        <option value="Education">Education</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="notes">Notes:</label>
+      <textarea name="notes" id="notes"></textarea>
+
+      <label for="timesVisited">Times Visited:</label>
+      <select id="timesVisited" name="timesVisited">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="5 +">5 +</option>
+      </select>
+
+      <button type="submit">Submit Country</button>
+    </form>
+  </body>
+</html>
