@@ -3,9 +3,12 @@ const router = express.Router();
 
 const User = require("../models/user.js");
 
-router.get("/", (req, res) => {
+router.get("/", async (req, res) => {
   try {
-    res.render("countries/index.ejs");
+    const currentUser = await User.findById(req.session.user._id);
+    res.render("countries/index.ejs", {
+      countries: currentUser.countries,
+    });
   } catch (error) {
     console.log(error);
     res.redirect("/");

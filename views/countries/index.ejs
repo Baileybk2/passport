@@ -9,5 +9,10 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Your Passport</h1>
     <a href="/users/<%= user._id %>/countries/new">Add a Country</a>
+    <ul>
+      <% countries.forEach((country) => { %>
+      <li><%= country.country %></li>
+      <% }) %>
+    </ul>
   </body>
 </html>
