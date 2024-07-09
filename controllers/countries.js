@@ -44,4 +44,16 @@ router.get("/:countryId", async (req, res) => {
   }
 });
 
+router.delete("/:countryId", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    currentUser.countries.id(req.params.countryId).deleteOne();
+    await currentUser.save();
+    res.redirect(`/users/${currentUser._id}/countries`);
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
 module.exports = router;
