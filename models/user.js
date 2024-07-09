@@ -21,7 +21,6 @@ const countrySchema = new mongoose.Schema({
   },
   locationOfStay: {
     type: String,
-    required: true,
   },
 });
 

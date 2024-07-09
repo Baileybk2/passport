@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= country.country %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= country.country %> on <%= country.date %></h1>
+    <% if (country.pointOfEntry) { %>
+    <p>Point of Entry: <%= country.pointOfEntry %></p>
+    <% } %> <% if (country.purpose) { %>
+    <p>Purpose: <%= country.purpose %></p>
+    <% } %> <% if (country.notes) { %>
+    <p>Notes: <%= country.notes %></p>
+    <% } %> <% if (country.locationOfStay) { %>
+    <p>Location of Stay: <%= country.locationOfStay %></p>
+    <% } %>
+  </body>
+</html>

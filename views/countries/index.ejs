@@ -11,7 +11,11 @@
     <a href="/users/<%= user._id %>/countries/new">Add a Country</a>
     <ul>
       <% countries.forEach((country) => { %>
-      <li><%= country.country %></li>
+      <li>
+        <a href="/users/<%= user._id %>/countries/<%= country._id %>">
+          <%= country.country %>
+        </a>
+      </li>
       <% }) %>
     </ul>
   </body>
