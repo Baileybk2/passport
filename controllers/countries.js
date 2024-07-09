@@ -44,6 +44,19 @@ router.get("/:countryId", async (req, res) => {
   }
 });
 
+router.get("/:countryId/edit", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const country = currentUser.countries.id(req.params.countryId);
+    res.render("countries/edit.ejs", {
+      country: country,
+    });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
 router.delete("/:countryId", async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
@@ -56,13 +69,13 @@ router.delete("/:countryId", async (req, res) => {
   }
 });
 
-router.get("/:countryId/edit", async (req, res) => {
+router.put("/:countryId", async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
     const country = currentUser.countries.id(req.params.countryId);
-    res.render("countries/edit.ejs", {
-      country: country,
-    });
+    country.set(req.body);
+    await currentUser.save();
+    res.redirect(`/users/${currentUser._id}/countries/${req.params.countryId}`);
   } catch (error) {
     console.log(error);
     res.redirect("/");
