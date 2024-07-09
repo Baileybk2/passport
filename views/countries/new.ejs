@@ -8,7 +8,7 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add a Country</h1>
-    <form action="" method="">
+    <form action="/users/<%= user._id %>/countries" method="POST">
       <label for="country">Country:</label>
       <input type="text" name="country" id="country" />
 
@@ -20,8 +20,8 @@
 
       <label for="purpose">Purpose:</label>
       <select id="purpose" name="purpose">
-        <option value="leisure">Leisure</option>
-        <option value="business">Business</option>
+        <option value="Leisure">Leisure</option>
+        <option value="Business">Business</option>
         <option value="Education">Education</option>
         <option value="Other">Other</option>
       </select>
