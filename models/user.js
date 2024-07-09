@@ -19,9 +19,9 @@ const countrySchema = new mongoose.Schema({
   notes: {
     type: String,
   },
-  timesVisited: {
+  locationOfStay: {
     type: String,
-    enum: ["1", "2", "3", "4", "5", "5 +"],
+    required: true,
   },
 });
 
