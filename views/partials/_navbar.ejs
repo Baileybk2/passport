@@ -1,6 +1,7 @@
 <nav>
   <% if(user) { %>
   <a href="/users/<%=user._id%>/countries">Your Passport</a>
+  <a href="/users">Explore Passport Community</a>
   <a href="/auth/sign-out">Sign Out</a>
   <% } else { %>
   <a href="/auth/sign-in">Sign In</a>

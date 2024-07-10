@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= user.username %>'s Passport</title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs', { user: user}) %>
+    <h1><%= user.username %>'s Passport</h1>
+    <ul>
+      <% user.countries.forEach((country) => { %>
+      <li><%= country.country %> on <%= country.date %></li>
+      <% }); %>
+    </ul>
+    <a href="/users">Back to Passport Community</a>
+  </body>
+</html>

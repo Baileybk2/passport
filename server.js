@@ -12,6 +12,7 @@ const passUserToView = require("./middleware/pass-user-to-view.js");
 
 const authController = require("./controllers/auth.js");
 const countriesController = require("./controllers/countries.js");
+const usersController = require("./controllers/users.js");
 
 const port = process.env.PORT ? process.env.PORT : "3000";
 
@@ -32,16 +33,19 @@ app.use(
   })
 );
 
-app.use(passUserToView);
-
 app.get("/", (req, res) => {
-  if (req.session.user) {
-    res.redirect(`/users/${req.session.user._id}/countries`);
-  } else {
-    res.render("index.ejs");
-  }
+  res.render("index.ejs", {
+    user: req.session.user,
+  });
 });
 
+app.use((req, res, next) => {
+  res.locals.user = req.user || null;
+  next();
+});
+
+app.use("/users", usersController);
+app.use(passUserToView);
 app.use("/auth", authController);
 app.use(isSignedIn);
 app.use("/users/:userId/countries", countriesController);
