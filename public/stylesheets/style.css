@@ -6,7 +6,7 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: #9ac2ef;
+  background-color: hsl(13, 100%, 85%);
 }
 
 .index-body {
@@ -63,18 +63,18 @@ body {
 }
 
 .signup-link {
-  background-color: #ce4866;
+  background-color: #3a972f;
   color: white;
   margin: 0 0 20px 0;
 }
 
 .signup-link:hover {
-  background-color: #ff5378;
+  background-color: #3a972f;
 }
 
 .signin-link {
   background-color: #f6e7e7;
-  color: #1c2e5b;
+  color: #31333b;
   margin: 20px 0 0 0;
 }
 
@@ -93,7 +93,7 @@ body {
 }
 
 h1 {
-  color: #1c2e5b;
+  color: #ffffff;
 }
 
 form {
@@ -105,7 +105,7 @@ form {
   background-color: #f6e7e7;
   padding: 30px 40px 20px 40px;
   border-radius: 20px;
-  color: #4b598e;
+  color: #31333b;
   font-weight: bold;
 }
 
@@ -117,10 +117,101 @@ input {
 
 button {
   padding: 10px;
-  background-color: #ce4866;
+  background-color: #3a972f;
   color: white;
   border-radius: 30px;
   border: none;
   margin: 15px 0;
   font-size: 1.1em;
+}
+
+.all-countries-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+.all-countries-header {
+  display: flex;
+  flex-direction: row;
+  font-size: 1em;
+  justify-content: space-between;
+  padding: 10px 20px;
+  width: 90%;
+}
+
+.add-countries-header > h1 {
+  font-size: 3em;
+}
+
+.add-country-link {
+  padding: 10px;
+  background-color: #3a972f;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1em;
+  padding: 2px 25px;
+  text-decoration: none;
+}
+
+.add-country-link:hover {
+  background-color: #3a972f;
+}
+
+ul {
+  list-style: none;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+ul > a {
+  text-decoration: none;
+  color: #31333b;
+  width: 50%;
+  background-color: #f6e7e7;
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+ul > a:hover {
+  background-color: #31333b;
+  color: white;
+}
+
+.new-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.new-body > form,
+.edit-body > form {
+  height: 70%;
+}
+
+textarea,
+select {
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+select {
+  margin-bottom: 10px;
+}
+
+.edit-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }

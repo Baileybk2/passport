@@ -3,31 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title><%= country.country %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= country.country %> on <%= country.date %></h1>
-    <% if (country.pointOfEntry) { %>
-    <p>Point of Entry: <%= country.pointOfEntry %></p>
-    <% } %> <% if (country.purpose) { %>
-    <p>Purpose: <%= country.purpose %></p>
-    <% } %> <% if (country.notes) { %>
-    <p>Notes: <%= country.notes %></p>
-    <% } %> <% if (country.locationOfStay) { %>
-    <p>Location of Stay: <%= country.locationOfStay %></p>
-    <% } %>
+    <div class="show-body">
+      <div class="show-header">
+        <h1><%= country.country %> : <%= country.date %></h1>
+      </div>
+      <div class="show-notes-container">
+        <% if (country.pointOfEntry) { %>
+        <p>Point of Entry: <%= country.pointOfEntry %></p>
+        <% } %> <% if (country.purpose) { %>
+        <p>Purpose: <%= country.purpose %></p>
+        <% } %> <% if (country.notes) { %>
+        <p>Notes: <%= country.notes %></p>
+        <% } %> <% if (country.locationOfStay) { %>
+        <p>Location of Stay: <%= country.locationOfStay %></p>
+        <% } %>
+      </div>
+    </div>
+    <div class="show-actions">
+      <a href="/users/<%= user._id %>/countries/<%= country._id %>/edit">
+        Edit this Country
+      </a>
 
-    <a href="/users/<%= user._id %>/countries/<%= country._id %>/edit">
-      Edit this Country
-    </a>
-
-    <form
-      action="/users/<%= user._id %>/countries/<%= country._id %>?_method=DELETE"
-      method="POST"
-    >
-      <button type="submit">Delete this Country</button>
-    </form>
+      <form
+        action="/users/<%= user._id %>/countries/<%= country._id %>?_method=DELETE"
+        method="POST"
+      >
+        <button type="submit">Delete this Country</button>
+      </form>
+    </div>
   </body>
 </html>

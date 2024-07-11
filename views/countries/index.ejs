@@ -8,16 +8,22 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Your Passport</h1>
-    <a href="/users/<%= user._id %>/countries/new">Add a Country</a>
-    <ul>
-      <% countries.forEach((country) => { %>
-      <li>
-        <a href="/users/<%= user._id %>/countries/<%= country._id %>">
-          <%= country.country %>
-        </a>
-      </li>
-      <% }) %>
-    </ul>
+    <div class="all-countries-body">
+      <div class="add-countries-header">
+        <h1>Your Passport</h1>
+        <a class="add-country-link" href="/users/<%= user._id %>/countries/new"
+          >Add a Country</a
+        >
+      </div>
+      <ul>
+        <% countries.forEach((country) => { %>
+        <li>
+          <a href="/users/<%= user._id %>/countries/<%= country._id %>">
+            <%= country.country %>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+    </div>
   </body>
 </html>

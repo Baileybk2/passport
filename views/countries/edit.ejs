@@ -9,6 +9,7 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Edit <%= country.country %></h1>
+    <div class="edit-body">
     <form
       action="/users/<%= user._id %>/countries/<%= country._id %>?_method=PUT"
       method="POST"
@@ -43,5 +44,6 @@
 
       <button type="submit">Update Country</button>
     </form>
+  </div>
   </body>
 </html>
