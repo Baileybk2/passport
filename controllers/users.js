@@ -20,7 +20,7 @@ router.get("/:id", async (req, res) => {
     res.render("users/show.ejs", { user });
   } catch (error) {
     console.log(error);
-    red.redirect("/");
+    res.redirect("/");
   }
 });
 
