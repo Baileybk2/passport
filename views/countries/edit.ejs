@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/show.css" />
     <title>Edit <%= country.country %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Edit <%= country.country %></h1>
+    <h1 class="page-title">Edit <%= country.country %></h1>
     <div class="edit-body">
     <form
+      class="form-container"
       action="/users/<%= user._id %>/countries/<%= country._id %>?_method=PUT"
       method="POST"
     >

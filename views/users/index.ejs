@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Community</title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs', { user: user }) %>
-    <h1>Explore the Passport Community</h1>
+    <h1 class="page-title">Passport Community</h1>
     <ul>
       <% users.forEach((user) => { %>
       <li>

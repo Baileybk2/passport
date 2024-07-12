@@ -88,7 +88,11 @@ h1 {
   color: #ffffff;
 }
 
-form {
+.auth-form {
+  margin-left: 24px;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -98,6 +102,10 @@ form {
   border-radius: 20px;
   color: #31333b;
   font-weight: bold;
+}
+
+form label {
+  margin-top: 8px;
 }
 
 .country-container {
@@ -136,24 +144,33 @@ button {
   font-size: 1.1em;
 }
 
+.country-detail {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
 .all-countries-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   margin-left: 30px;
+  background-image: url("https://plus.unsplash.com/premium_photo-1679046108642-fc43a07eba5e?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
 }
 
 .all-countries-header {
   display: flex;
   flex-direction: row;
-  font-size: 1em;
   justify-content: space-between;
   padding: 10px 20px;
   width: 90%;
 }
 
 .add-countries-header > h1 {
-  font-size: 3em;
+  font-size: 3.5em;
   margin-bottom: 10px;
 }
 
@@ -209,7 +226,7 @@ ul li::marker {
 
 .new-body {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   height: 100%;
 }
@@ -222,14 +239,16 @@ select {
   font-family: "Poppins", sans-serif;
 }
 
-select {
-  margin-bottom: 10px;
-}
-
 .edit-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  align-items: start;
+  padding: 0 24px 24px;
   height: 100%;
+}
+
+.page-title {
+  font-size: 2.5em;
+  padding: 0 24px;
+  color: #fff !important;
 }

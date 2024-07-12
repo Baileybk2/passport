@@ -3,24 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <link rel="stylesheet" href="/stylesheets/show.css" />
     <title><%= country.country %></title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <h1 class="page-title"><%= country.country %> : <%= country.date %></h1>
     <div class="show-body">
-      <div class="show-header">
-        <h1><%= country.country %> : <%= country.date %></h1>
-      </div>
       <div class="show-notes-container">
         <% if (country.pointOfEntry) { %>
-        <p>Point of Entry: <%= country.pointOfEntry %></p>
+        <div class="country-detail">
+          <label> Point of Entry:</label>
+          <p><%= country.pointOfEntry %></p>
+        </div>
         <% } %> <% if (country.purpose) { %>
-        <p>Purpose: <%= country.purpose %></p>
+        <div class="country-detail">
+          <label>Purpose: </label>
+          <p><%= country.purpose %></p>
+        </div>
+
         <% } %> <% if (country.notes) { %>
-        <p>Notes: <%= country.notes %></p>
+        <div class="country-detail">
+          <label>Notes:</label>
+          <p><%= country.notes %></p>
+        </div>
+
         <% } %> <% if (country.locationOfStay) { %>
-        <p>Location of Stay: <%= country.locationOfStay %></p>
+        <div class="country-detail">
+          <label>Location of Stay:</label>
+          <p><%= country.locationOfStay %></p>
+        </div>
         <% } %>
       </div>
     </div>

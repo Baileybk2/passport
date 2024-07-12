@@ -9,8 +9,14 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <div class="singup-container">
-      <h1>Let's get started! Create your Passport account below.</h1>
-      <form action="/auth/sign-up" method="POST">
+      <h1 class="page-title">
+        Let's get started! Create your Passport account below.
+      </h1>
+      <form
+        class="auth-form form-container"
+        action="/auth/sign-up"
+        method="POST"
+      >
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" required />
         <label for="password">Password:</label>

@@ -8,9 +8,13 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Add a Country</h1>
+    <h1 class="page-title">Add a Country</h1>
     <div class="new-body">
-      <form action="/users/<%= user._id %>/countries" method="POST">
+      <form
+        class="form-container"
+        action="/users/<%= user._id %>/countries"
+        method="POST"
+      >
         <label for="country">Country:</label>
         <input type="text" name="country" id="country" />
 

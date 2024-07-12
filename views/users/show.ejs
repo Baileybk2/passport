@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/show.css" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title><%= user.username %>'s Passport</title>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs', { user: user}) %>
-    <h1><%= user.username %>'s Passport</h1>
+    <h1 class="page-title"><%= user.username %>'s Passport</h1>
     <ul>
       <% user.countries.forEach((country) => { %>
       <li><%= country.country %> on <%= country.date %></li>
