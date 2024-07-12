@@ -18,7 +18,10 @@
       <ul>
         <% countries.forEach((country) => { %>
         <li>
-          <a href="/users/<%= user._id %>/countries/<%= country._id %>">
+          <a
+            href="/users/<%= user._id %>/countries/<%= country._id %>"
+            class="country-container"
+          >
             <%= country.country %>
           </a>
         </li>

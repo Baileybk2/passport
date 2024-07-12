@@ -93,9 +93,21 @@ form {
   flex-direction: column;
   justify-content: space-evenly;
   width: 20em;
-  height: 50%;
   background-color: #f6e7e7;
   padding: 30px 40px 20px 40px;
+  border-radius: 20px;
+  color: #31333b;
+  font-weight: bold;
+}
+
+.country-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #f6e7e7;
+  padding: 16px;
+  margin-top: 8px;
+  width: 16em;
   border-radius: 20px;
   color: #31333b;
   font-weight: bold;
@@ -154,10 +166,11 @@ button {
 
 ul {
   list-style: none;
-  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 ul > a {
@@ -186,11 +199,6 @@ ul li::marker {
   justify-content: center;
   align-items: center;
   height: 100%;
-}
-
-.new-body > form,
-.edit-body > form {
-  height: 70%;
 }
 
 textarea,

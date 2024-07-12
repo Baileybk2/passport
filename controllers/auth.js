@@ -56,7 +56,7 @@ router.post("/sign-in", async (req, res) => {
       _id: userInDatabase._id,
     };
 
-    res.redirect("/");
+    res.redirect(`/users/${req.session.user._id}/countries`);
   } catch (error) {
     console.log(error);
     res.redirect("/");
