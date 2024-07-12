@@ -46,11 +46,10 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use("/users", usersController);
-app.use(passUserToView);
 app.use(passUserToView);
 app.use("/auth", authController);
 app.use(isSignedIn);
+app.use("/users", usersController);
 app.use("/users/:userId/countries", countriesController);
 
 app.listen(port, () => {
