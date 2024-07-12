@@ -18,6 +18,7 @@
   margin: 0 15px;
   color: #31333b;
   font-weight: bold;
+  transition: 0.2s ease-in-out;
 }
 
 .authlink:hover {

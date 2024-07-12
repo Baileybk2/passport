@@ -105,12 +105,19 @@ form {
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #f6e7e7;
-  padding: 16px;
+  padding: 8px 16px;
+  text-decoration: none;
   margin-top: 8px;
   width: 16em;
   border-radius: 20px;
   color: #31333b;
   font-weight: bold;
+  transition: 0.25s ease-in-out;
+}
+
+.country-container:hover {
+  background-color: purple;
+  color: white;
 }
 
 input {
@@ -147,6 +154,7 @@ button {
 
 .add-countries-header > h1 {
   font-size: 3em;
+  margin-bottom: 10px;
 }
 
 .add-country-link {
@@ -158,10 +166,15 @@ button {
   font-size: 1.1em;
   padding: 2px 25px;
   text-decoration: none;
+  margin-bottom: 16px;
+  display: inline-block;
+  transition: 0.25s ease-in-out;
 }
 
 .add-country-link:hover {
-  background-color: #3a972f;
+  /* background-color: #77e86a; */
+  padding: 5px 28px;
+  font-size: 1.2em;
 }
 
 ul {
@@ -206,6 +219,7 @@ select {
   border: 1px solid rgb(182, 182, 182);
   border-radius: 10px;
   padding: 10px;
+  font-family: "Poppins", sans-serif;
 }
 
 select {
