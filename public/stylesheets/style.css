@@ -6,7 +6,7 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
-  background-color: hsl(13, 100%, 85%);
+  background-color: hsl(13, 58%, 75%);
 }
 
 .index-body {
@@ -33,14 +33,6 @@ body {
 .sub2header {
   margin: 0 20px 0 20px;
   font-size: 1em;
-}
-
-.index-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
 }
 
 .auth-links {
@@ -183,6 +175,10 @@ ul > a {
 ul > a:hover {
   background-color: #31333b;
   color: white;
+}
+
+ul li::marker {
+  color: #31333b;
 }
 
 .new-body {
