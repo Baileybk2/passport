@@ -108,7 +108,8 @@ form label {
   margin-top: 8px;
 }
 
-.country-container {
+.country-container,
+.user-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -188,8 +189,24 @@ button {
   transition: 0.25s ease-in-out;
 }
 
-.add-country-link:hover {
-  /* background-color: #77e86a; */
+.back-button {
+  background-color: #3a972f;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1em;
+  padding: 10px;
+  text-decoration: none;
+  margin-top: 15px;
+  margin-bottom: 16px;
+  margin-right: auto;
+  display: inline-block;
+  transition: 0.25s ease-in-out;
+  margin-left: 16px;
+}
+
+.add-country-link:hover,
+.back-button:hover {
   padding: 5px 28px;
   font-size: 1.2em;
 }
@@ -248,7 +265,7 @@ select {
 }
 
 .page-title {
-  font-size: 2.5em;
+  font-size: 2.8em;
   padding: 0 24px;
   color: #fff !important;
 }

@@ -14,24 +14,24 @@
       <div class="show-notes-container">
         <% if (country.pointOfEntry) { %>
         <div class="country-detail">
-          <label> Point of Entry:</label>
+          <label class="country-label"> Point of Entry:</label>
           <p><%= country.pointOfEntry %></p>
         </div>
         <% } %> <% if (country.purpose) { %>
         <div class="country-detail">
-          <label>Purpose: </label>
+          <label class="country-label">Purpose: </label>
           <p><%= country.purpose %></p>
         </div>
 
         <% } %> <% if (country.notes) { %>
         <div class="country-detail">
-          <label>Notes:</label>
+          <label class="country-label">Notes:</label>
           <p><%= country.notes %></p>
         </div>
 
         <% } %> <% if (country.locationOfStay) { %>
         <div class="country-detail">
-          <label>Location of Stay:</label>
+          <label class="country-label">Location of Stay:</label>
           <p><%= country.locationOfStay %></p>
         </div>
         <% } %>

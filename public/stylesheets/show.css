@@ -8,12 +8,19 @@ body {
   background-color: hsl(13, 58%, 75%);
 }
 
-.show-body {
+.show-body,
+.user-country-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  background-color: #f6e7e7;
+  padding: 10px 10px;
+  text-decoration: none;
+  border-radius: 20px;
+  max-width: 25em;
+  margin-left: 16px;
 }
 
 .show-header {
@@ -30,6 +37,13 @@ body {
   margin-left: 10px;
 }
 
+.country-label {
+  color: #3a972f;
+  font-weight: bold;
+  font-size: 1.4em;
+  margin: 10px 30px;
+}
+
 .show-actions {
   display: flex;
   flex-direction: row;
@@ -40,7 +54,7 @@ body {
 
 button {
   padding: 8px 10px;
-  background-color: #3a972f;
+  background-color: #31333b;
   color: white;
   border-radius: 30px;
   border: none;
@@ -54,20 +68,16 @@ button:hover {
 }
 
 .show-actions > a {
-  background-color: #31333b;
+  background-color: #3a972f;
   color: white;
   text-decoration: none;
   font-size: 1.1em;
-  padding: 8px 10px;
+  padding: 5px 10px;
   border-radius: 30px;
   width: 10em;
   text-align: center;
   margin: 5px;
   font-family: "Poppins", sans-serif;
-}
-
-.show-actions > a:hover {
-  background-color: #31333b;
 }
 
 .show-notes-container {
@@ -88,10 +98,10 @@ button:hover {
 }
 
 p {
-  color: #3a972f;
+  color: #31333b;
   font-weight: bold;
-  font-size: 1.4em;
-  margin: 10px 30px;
+  font-size: 1.2em;
+  margin: 6px 6px;
   text-align: center;
 }
 
