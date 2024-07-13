@@ -144,7 +144,7 @@ input {
 }
 
 button {
-  padding: 10px;
+  padding: 5px 10px;
   background-color: #3a972f;
   color: white;
   border-radius: 30px;

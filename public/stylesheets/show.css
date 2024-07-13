@@ -54,7 +54,7 @@ body {
 }
 
 button {
-  padding: 8px 10px;
+  padding: 5.5px 10px;
   background-color: #31333b;
   color: white;
   border-radius: 30px;
@@ -67,6 +67,18 @@ button {
 button:hover {
   font-size: 1.3em;
   transition: 0.2s ease-in-out;
+}
+
+.update-button {
+  padding: 5.5px auto;
+  background-color: #3a972f;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.1em;
+  width: auto;
+  margin: 5px;
+  margin-top: 10px;
 }
 
 .show-actions > a {
