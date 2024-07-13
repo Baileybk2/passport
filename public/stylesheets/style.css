@@ -1,7 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -102,6 +101,8 @@ h1 {
   border-radius: 20px;
   color: #31333b;
   font-weight: bold;
+  margin-left: 24px;
+  margin-bottom: 24px;
 }
 
 form label {
@@ -125,8 +126,15 @@ form label {
 }
 
 .country-container:hover {
-  background-color: purple;
+  background-color: rgb(240, 71, 113);
   color: white;
+  padding: 12px 20px;
+}
+
+.user-container:hover {
+  background-color: rgb(240, 71, 113);
+  color: white;
+  padding: 12px 20px;
 }
 
 input {
@@ -145,13 +153,15 @@ button {
   font-size: 1.1em;
 }
 
-.country-detail {
+.country-detail,
+.user-country-list {
   display: flex;
   align-items: center;
   justify-content: start;
 }
 
-.all-countries-body {
+.all-countries-body,
+.all-users-body {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -205,10 +215,14 @@ button {
   margin-left: 16px;
 }
 
-.add-country-link:hover,
-.back-button:hover {
+.add-country-link:hover {
   padding: 5px 28px;
   font-size: 1.2em;
+}
+
+.back-button:hover {
+  padding: auto;
+  font-size: 1.3em;
 }
 
 ul {
@@ -266,6 +280,6 @@ select {
 
 .page-title {
   font-size: 2.8em;
-  padding: 0 24px;
+  padding: 0 24px 0 0;
   color: #fff !important;
 }

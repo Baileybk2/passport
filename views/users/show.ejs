@@ -13,7 +13,10 @@
     <div class="user-country-container">
       <ul>
         <% user.countries.forEach((country) => { %>
-        <li><%= country.country %> : <%= country.date %></li>
+        <li class="user-country-list">
+          <label class="user-country-label"><%= country.country %> :</label>
+          <p><%= country.date %></p>
+        </li>
         <% }); %>
       </ul>
     </div>

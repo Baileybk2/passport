@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "DM Sans", sans-serif;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -37,7 +37,8 @@ body {
   margin-left: 10px;
 }
 
-.country-label {
+.country-label,
+.user-country-label {
   color: #3a972f;
   font-weight: bold;
   font-size: 1.4em;
@@ -59,12 +60,13 @@ button {
   border-radius: 30px;
   border: none;
   font-size: 1.1em;
-  width: 10em;
+  width: auto;
   margin: 5px;
 }
 
 button:hover {
-  background-color: #3a972f;
+  font-size: 1.3em;
+  transition: 0.2s ease-in-out;
 }
 
 .show-actions > a {
@@ -78,6 +80,11 @@ button:hover {
   text-align: center;
   margin: 5px;
   font-family: "Poppins", sans-serif;
+}
+
+.show-actions > a:hover {
+  font-size: 1.3em;
+  transition: 0.2s ease-in-out;
 }
 
 .show-notes-container {
@@ -99,7 +106,6 @@ button:hover {
 
 p {
   color: #31333b;
-  font-weight: bold;
   font-size: 1.2em;
   margin: 6px 6px;
   text-align: center;
