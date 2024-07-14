@@ -8,38 +8,40 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1 class="page-title">Add a Country</h1>
-    <div class="new-body">
-      <form
-        class="form-container"
-        action="/users/<%= user._id %>/countries"
-        method="POST"
-      >
-        <label for="country">Country:</label>
-        <input type="text" name="country" id="country" />
+    <div class="container">
+      <h1 class="page-title">Add a Country</h1>
+      <div class="new-body">
+        <form
+          class="form-container"
+          action="/users/<%= user._id %>/countries"
+          method="POST"
+        >
+          <label for="country">Country:</label>
+          <input type="text" name="country" id="country" />
 
-        <label for="date">Date:</label>
-        <input type="text" name="date" id="date" value="(mm/dd/yyyy)" />
+          <label for="date">Date:</label>
+          <input type="text" name="date" id="date" value="(mm/dd/yyyy)" />
 
-        <label for="pointOfEntry">Point of Entry (city):</label>
-        <input type="text" name="pointOfEntry" id="pointOfEntry" />
+          <label for="pointOfEntry">Point of Entry (city):</label>
+          <input type="text" name="pointOfEntry" id="pointOfEntry" />
 
-        <label for="purpose">Purpose:</label>
-        <select id="purpose" name="purpose">
-          <option value="Leisure">Leisure</option>
-          <option value="Business">Business</option>
-          <option value="Education">Education</option>
-          <option value="Other">Other</option>
-        </select>
+          <label for="purpose">Purpose:</label>
+          <select id="purpose" name="purpose">
+            <option value="Leisure">Leisure</option>
+            <option value="Business">Business</option>
+            <option value="Education">Education</option>
+            <option value="Other">Other</option>
+          </select>
 
-        <label for="notes">Notes:</label>
-        <textarea name="notes" id="notes"></textarea>
+          <label for="notes">Notes:</label>
+          <textarea name="notes" id="notes"></textarea>
 
-        <label for="locationOfStay">Location of Stay (city):</label>
-        <input type="text" name="locationOfStay" id="locationOfStay" />
+          <label for="locationOfStay">Location of Stay (city):</label>
+          <input type="text" name="locationOfStay" id="locationOfStay" />
 
-        <button type="submit">Submit Country</button>
-      </form>
+          <button type="submit">Submit Country</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>

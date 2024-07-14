@@ -9,17 +9,19 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs', { user: user}) %>
-    <h1 class="page-title"><%= user.username %>'s Passport</h1>
-    <div class="user-country-container">
-      <ul>
-        <% user.countries.forEach((country) => { %>
-        <li class="user-country-list">
-          <label class="user-country-label"><%= country.country %> :</label>
-          <p><%= country.date %></p>
-        </li>
-        <% }); %>
-      </ul>
+    <div class="container">
+      <h1 class="page-title"><%= user.username %>'s Passport</h1>
+      <div class="user-country-container">
+        <ul>
+          <% user.countries.forEach((country) => { %>
+          <li class="user-country-list">
+            <label class="user-country-label"><%= country.country %> :</label>
+            <p><%= country.date %></p>
+          </li>
+          <% }); %>
+        </ul>
+      </div>
+      <a href="/users" class="back-button">Back to Passport Community</a>
     </div>
-    <a href="/users" class="back-button">Back to Passport Community</a>
   </body>
 </html>

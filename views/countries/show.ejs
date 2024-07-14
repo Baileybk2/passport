@@ -9,45 +9,47 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1 class="page-title"><%= country.country %> : <%= country.date %></h1>
-    <div class="show-body">
-      <div class="show-notes-container">
-        <% if (country.pointOfEntry) { %>
-        <div class="country-detail">
-          <label class="country-label"> Point of Entry:</label>
-          <p><%= country.pointOfEntry %></p>
-        </div>
-        <% } %> <% if (country.purpose) { %>
-        <div class="country-detail">
-          <label class="country-label">Purpose: </label>
-          <p><%= country.purpose %></p>
-        </div>
+    <div class="container">
+      <h1 class="page-title"><%= country.country %> : <%= country.date %></h1>
+      <div class="show-body">
+        <div class="show-notes-container">
+          <% if (country.pointOfEntry) { %>
+          <div class="country-detail">
+            <label class="country-label"> Point of Entry:</label>
+            <p><%= country.pointOfEntry %></p>
+          </div>
+          <% } %> <% if (country.purpose) { %>
+          <div class="country-detail">
+            <label class="country-label">Purpose: </label>
+            <p><%= country.purpose %></p>
+          </div>
 
-        <% } %> <% if (country.notes) { %>
-        <div class="country-detail">
-          <label class="country-label">Notes:</label>
-          <p><%= country.notes %></p>
-        </div>
+          <% } %> <% if (country.notes) { %>
+          <div class="country-detail">
+            <label class="country-label">Notes:</label>
+            <p><%= country.notes %></p>
+          </div>
 
-        <% } %> <% if (country.locationOfStay) { %>
-        <div class="country-detail">
-          <label class="country-label">Location of Stay:</label>
-          <p><%= country.locationOfStay %></p>
+          <% } %> <% if (country.locationOfStay) { %>
+          <div class="country-detail">
+            <label class="country-label">Location of Stay:</label>
+            <p><%= country.locationOfStay %></p>
+          </div>
+          <% } %>
         </div>
-        <% } %>
       </div>
-    </div>
-    <div class="show-actions">
-      <a href="/users/<%= user._id %>/countries/<%= country._id %>/edit">
-        Edit this Country
-      </a>
+      <div class="show-actions">
+        <a href="/users/<%= user._id %>/countries/<%= country._id %>/edit">
+          Edit this Country
+        </a>
 
-      <form
-        action="/users/<%= user._id %>/countries/<%= country._id %>?_method=DELETE"
-        method="POST"
-      >
-        <button type="submit">Delete this Country</button>
-      </form>
+        <form
+          action="/users/<%= user._id %>/countries/<%= country._id %>?_method=DELETE"
+          method="POST"
+        >
+          <button type="submit">Delete this Country</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
