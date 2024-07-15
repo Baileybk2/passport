@@ -30,7 +30,7 @@
 
 .country-label,
 .user-country-label {
-  color: #3a972f;
+  color: #308529;
   font-weight: bold;
   font-size: 1.4em;
   margin: 10px 0 10px 30px;
@@ -64,7 +64,7 @@ button:hover {
 
 .update-button {
   padding: 5.5px auto;
-  background-color: #3a972f;
+  background-color: #308529;
   color: white;
   border-radius: 30px;
   border: none;
@@ -75,7 +75,7 @@ button:hover {
 }
 
 .show-actions > a {
-  background-color: #3a972f;
+  background-color: #308529;
   color: white;
   text-decoration: none;
   font-size: 1.1em;
