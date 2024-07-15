@@ -125,14 +125,16 @@ form label {
 }
 
 .country-container:hover {
-  background-color: rgb(240, 71, 113);
+  background-color: #e71348;
   color: white;
+  border: 1px solid white;
   padding: 12px 20px;
 }
 
 .user-container:hover {
-  background-color: rgb(240, 71, 113);
+  background-color: #e71348;
   color: white;
+  border: 1px solid white;
   padding: 12px 20px;
 }
 
