@@ -245,15 +245,6 @@ ul > a {
   text-align: center;
 }
 
-ul > a:hover {
-  background-color: #31333b;
-  color: white;
-}
-
-ul li::marker {
-  color: #31333b;
-}
-
 textarea,
 select {
   border: 1px solid rgb(182, 182, 182);
