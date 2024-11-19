@@ -19,6 +19,26 @@ html {
   background: none;
 }
 
+.features {
+  background-color: rgba(255, 255, 255, 0.695);
+  border: 1px solid #31333b;
+  border-radius: 25px;
+  padding: 5px 40px 5px 40px;
+}
+
+.feature-title,
+.feature-title-main {
+  text-align: center;
+  color: #31333b;
+}
+
+.feature-img {
+  max-width: 400px;
+  max-height: 4000px;
+  border-radius: 20px;
+  border: 1px solid #31333b;
+}
+
 .index-body {
   color: #ffffff;
 }
@@ -32,8 +52,8 @@ html {
 .main-header {
   font-weight: bold;
   color: white;
-  font-size: 3.8em;
-  margin: -10px 20px -40px 20px;
+  font-size: 2.5em;
+  margin: -40px 20px -40px 20px;
 }
 
 .subheader {
